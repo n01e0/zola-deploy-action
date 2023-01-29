@@ -58,7 +58,7 @@ main() {
     git config --global url."$GITHUB_SERVER_URL/".insteadOf "git@${GITHUB_HOSTNAME}":
     if [[ "$BUILD_THEMES" ]]; then
         echo "Adding safe directory"
-        git config --global --add safe.directory /github/workspace
+        git config --global --add safe.directory /github/workspace/*
         echo "Fetching themes"
         git submodule update --init --recursive
     fi
