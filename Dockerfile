@@ -19,4 +19,6 @@ RUN wget -q -O - \
 
 COPY entrypoint.sh /entrypoint.sh
 
+RUN chown root:root .
+
 ENTRYPOINT ["/entrypoint.sh"]
