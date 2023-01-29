@@ -19,6 +19,6 @@ RUN wget -q -O - \
 
 COPY entrypoint.sh /entrypoint.sh
 
-RUN chown root:root .
+RUN git config --global --add safe.directory /github/workspace
 
 ENTRYPOINT ["/entrypoint.sh"]
